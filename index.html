@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text/javascript" defer></script>
+    <script src="https://kit.fontawesome.com/63dc2b58c0.js" crossorigin="anonymous"></script>
+    <title>Don't get angry</title>
+</head>
+<body>
+    <div>
+    <div class="container">
+        <button id="btn-restart" onclick="location.reload();">Restart Game</button>
+        <div class="dice_container">
+            <i id="dice1" class="fas fa-dice-one"></i>
+            <i id="dice2" class="fas fa-dice-two"></i>
+            <i id="dice3"class="fas fa-dice-three"></i>
+            <i id="dice4"class="fas fa-dice-four"></i>
+            <i id="dice5"class="fas fa-dice-five"></i>
+            <i id="dice6" class="fas fa-dice-six"></i>
+        </div>
+        
+        <button id="btn" onclick="roll_dice(1,6)">Roll the Dice</button>
+       
+        
+        
+        <p id="message_to_player"></p>
+        <p id="message_to_player3"></p>
+        <p id="message_to_player2"></p>
+
+        <p id="game_rules">Game rules: Each player can choose playing color. The players roll the dice in turn. Throwing a six also means that they can throw a dice again. If a piece cannot be brought into the game then any other piece in the game must be moved if possible. They can jump over other pieces and throw out the oppontent pieces if they land on them. The winner of the game is the player who manages to bring all their pieces into their own home row.</p>
+
+       
+       
+       
+    </div>
+
+    <p id="rules">How to move your pieces: 1. Roll the Dice. 2. Click on the piece that you want to move. </p>
+   
+    <div class="board">
+        
+        <div style="background-color: white; border-radius: 0%; border:7px solid #ea4c63;" class="box exit_red road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road" ></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road" ></div>
+         <div class="box road"></div>
+         <div style="background-color: #333; border: 7px solid #ea4c63; border-radius: 50%; " class="box red_goal road" id="red_goal1"></div>
+         <div style="background-color: #333; border: 7px solid #ea4c63; border-radius: 50%;" class="box red_goal road" id="red_goal2"></div>
+         <div style="background-color: #333; border: 7px solid #ea4c63; border-radius: 50%;" class="box red_goal road" id="red_goal3"></div>
+         <div style="background-color: #333; border: 7px solid #ea4c63; border-radius: 50%;" class="box red_goal road" id="red_goal4"></div>
+         <div class="box"></div>
+         <div style="background-color: #333; border: 7px solid #40a6d5; border-radius: 50%;"  class="box blue_goal road" id="blue_goal1"></div>
+         <div style="background-color: #333; border: 7px solid #40a6d5; border-radius: 50%;" class="box blue_goal road" id="blue_goal2"></div>
+         <div style="background-color: #333; border: 7px solid #40a6d5; border-radius: 50%;" class="box blue_goal road" id="blue_goal3"></div>
+         <div style="background-color: #333; border: 7px solid #40a6d5; border-radius: 50%;" class="box blue_goal road" id="blue_goal4"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div style="background-color: white;  border-radius: 0%; border: 7px solid #40a6d5;"class="box exit_blue road"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box road"></div>
+         <div class="box"></div>
+         <div class="box road"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box road"></div>
+         <div class="box"></div>
+         <div class="box road"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div style="background:white; border: 7px solid #ea4c63; border-radius: 50%;" class="box red_figure_start_position road" id="parent"></div>
+         <div style="background:white; border: 7px solid #ea4c63; border-radius: 50%;" class="box red_figure_start_position road" id="parent"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box road"></div>
+         <div class="box"></div>
+         <div class="box road"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div style="background:white; border: 7px solid #40a6d5; border-radius: 50%;" class="box blue_figure_start_position road" id="parent"></div>
+         <div style="background:white; border: 7px solid #40a6d5; border-radius: 50%;" class="box blue_figure_start_position road" id="parent"></div>
+         <div style="background:white; border: 7px solid #ea4c63; border-radius: 50%;" class="box red_figure_start_position road" id="parent"></div>
+         <div style="background:white; border: 7px solid #ea4c63; border-radius: 50%;" class="box red_figure_start_position road" id="parent"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box road"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div style="background:white; border: 7px solid #40a6d5; border-radius: 50%;"class="box blue_figure_start_position road" id="parent"></div>
+         <div style="background:white; border: 7px solid #40a6d5; border-radius: 50%;"class="box blue_figure_start_position road" id="parent"></div>
+    </div>
+
+    
+    </div>
+ 
+</body>
+</html>

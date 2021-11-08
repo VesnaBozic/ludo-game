@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box}
+body {
+    height: 100vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+.container {
+  margin-top:3%;
+  text-align: center;
+  width: 30%;
+  float: left;}
+
+#btn, #btn-restart {
+    color: black;
+   text-align: center;
+   padding: 12px 12px 12px 12px;
+   border-radius: 7px;
+   font-size: 16px;
+   border: 3px solid #93b549;
+   background: white}
+
+#btn:hover , #btn-restart:hover{
+    background-color: black;
+    color: white}
+.board {
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: 12vh 12vh 12vh 12vh 12vh 12vh 12vh 12vh 12vh 12vh 12vh ;
+    grid-template-rows: 12vh 12vh 12vh 12vh 12vh 12vh 12vh ;
+    margin-left: 5%;
+    width: 65%;
+    float: right;}
+.box {
+    background-color: white;
+    text-align: center;
+    margin: 1px;
+}
+#dice1, #dice2, #dice3, #dice4, #dice5, #dice6 {
+    font-size: 35vh;
+    color: #93b549;
+    margin-top: 2%;}
+
+#message_to_player{
+    margin-top: 5%;
+    color:#93b549;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 2vh;
+    font-weight: bold;}
+
+#rules {
+    font-size: 2.2vh;
+    margin-top: 0%;
+    padding-top: 1.5%;
+    color: #93b549;
+    font-weight: bold;
+  letter-spacing: 1px;}
+
+.road {
+    background-color: antiquewhite;
+    border-radius: 50%;
+    border: 7px solid #93b549;}
+
+#game_rules {
+    color: #93b549;
+    font-size: 2vh;
+    margin-top: 20%;
+    margin-left: 5%;
+}
