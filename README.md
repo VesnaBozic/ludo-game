@@ -1,3 +1,3 @@
 # Ludo game for two players.
 
-[Play](https://dontgetangry.netlify.app/)
+[Play](https://vesnabozic.github.io/ludo-game/)
