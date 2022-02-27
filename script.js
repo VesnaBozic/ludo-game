@@ -163,9 +163,10 @@ blue_figure_start_position3.appendChild(blue_figure3);
 blue_figure_start_position4.appendChild(blue_figure4);
 
 
-
+// here i am making list that represent path for red and blue player
 let red_player_road = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 29, 28, 27, 26, 32, 34, 38, 45, 44, 43, 37, 33, 31, 25, 24, 23, 22, 21, 11, 12, 13, 14, 15]
 let blue_player_road = [30, 29, 28, 27, 26, 32, 34, 38, 45, 44, 43, 37, 33, 31, 25, 24, 23, 22, 21, 11, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 19, 18, 17, 16]
+// starting position for figures
 let positions = {
     "red_piece1": ["red", 35, null],
     "red_piece2": ["red", 36, null],
@@ -268,7 +269,7 @@ function move(position, number, id) {
             }
         }
     }
-
+    // cheking if all figures are on the goals position then the player is one
     if (red_goal1.hasChildNodes() && red_goal2.hasChildNodes() && red_goal3.hasChildNodes() && red_goal4.hasChildNodes()) {
         message_to_player.innerHTML = "Red player won!"
     }
