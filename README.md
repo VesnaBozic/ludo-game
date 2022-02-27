@@ -19,4 +19,4 @@ The winner of the game is the player who manages to bring all their pieces into 
 
 ## Tecnologies used
 
-![technologies](/assets/javascript.png)
+![technologies](/assets/javascript.png) ![technologies](/assets/html5.png) ![technologies](/assets/css3.png)
