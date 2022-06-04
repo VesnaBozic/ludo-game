@@ -192,7 +192,7 @@ function move(position, number, id) {
             if (positions[id][0] == "red") {
                 if (roads[red_player_road[0]].hasChildNodes()) {
 
-                    for (piece in positions) {
+                    for (let piece in positions) {
                         if (roads[red_player_road[0]].firstChild.getAttribute("id") == piece) {
                             let e = roads[red_player_road[0]].firstChild;
 
@@ -209,7 +209,7 @@ function move(position, number, id) {
             }
             else if (positions[id][0] == "blue") {
                 if (roads[blue_player_road[0]].hasChildNodes()) {
-                    for (piece in positions) {
+                    for (let piece in positions) {
                         if (roads[blue_player_road[0]].firstChild.getAttribute("id") == piece) {
                             let e = roads[blue_player_road[0]].firstChild;
 
@@ -236,7 +236,7 @@ function move(position, number, id) {
             roads[parseInt(position)].removeChild(child);
             if (positions[id][0] == "red") {
                 if (roads[red_player_road[positions[id][2]]].hasChildNodes()) {
-                    for (piece in positions) {
+                    for (let piece in positions) {
                         if (roads[red_player_road[positions[id][2]]].firstChild.getAttribute("id") == piece) {
                             let eaten_piece = roads[red_player_road[positions[id][2]]].firstChild;
                             roads[red_player_road[positions[id][2]]].removeChild(eaten_piece);
@@ -253,7 +253,7 @@ function move(position, number, id) {
             }
             else if (positions[id][0] == "blue") {
                 if (roads[blue_player_road[positions[id][2]]].hasChildNodes()) {
-                    for (piece in positions) {
+                    for (let piece in positions) {
                         if (roads[blue_player_road[positions[id][2]]].firstChild.getAttribute("id") == piece) {
                             let eaten_piece = roads[blue_player_road[positions[id][2]]].firstChild;
                             roads[blue_player_road[positions[id][2]]].removeChild(eaten_piece);
